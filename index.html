@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweel's Wheels</title>
+    <meta name="description" content="Comprehensive resources and products for special needs, accessibility, and adaptive riding.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><img src="logo.png" alt="Tweel's Wheels Logo" class="logo-image"> Tweel's Wheels</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="resources-hero">
+            <div class="container">
+                <h1>Play Without Limits</h1>
+                <p>Beautifully designed, affordable play products for children with mobility challenges.</p>
+            </div>
+        </section>
+
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2>Find the Perfect Product</h2>
+                
+                <!-- Faceted Search Interface -->
+                <div class="faceted-search">
+                    <div class="filters-sidebar">
+                        <div class="filter-group">
+                            <h3>Condition</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="cerebral-palsy" class="filter-checkbox" data-filter="condition">
+                                    <span class="checkmark"></span>
+                                    Cerebral Palsy
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="autism" class="filter-checkbox" data-filter="condition">
+                                    <span class="checkmark"></span>
+                                    Autism
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="down-syndrome" class="filter-checkbox" data-filter="condition">
+                                    <span class="checkmark"></span>
+                                    Down Syndrome
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Developmental Goal</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="cognition" class="filter-checkbox" data-filter="goal">
+                                    <span class="checkmark"></span>
+                                    Cognition
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="language" class="filter-checkbox" data-filter="goal">
+                                    <span class="checkmark"></span>
+                                    Language
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="physical-development" class="filter-checkbox" data-filter="goal">
+                                    <span class="checkmark"></span>
+                                    Physical Development
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="sensory-activities" class="filter-checkbox" data-filter="goal">
+                                    <span class="checkmark"></span>
+                                    Sensory Activities
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="socialization" class="filter-checkbox" data-filter="goal">
+                                    <span class="checkmark"></span>
+                                    Socialization
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Age</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="toddler" class="filter-checkbox" data-filter="age">
+                                    <span class="checkmark"></span>
+                                    Toddler (1-3 years)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="preschool" class="filter-checkbox" data-filter="age">
+                                    <span class="checkmark"></span>
+                                    Preschool (3-5 years)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="teen" class="filter-checkbox" data-filter="age">
+                                    <span class="checkmark"></span>
+                                    Teen (13-18 years)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Product Type</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="arts-crafts" class="filter-checkbox" data-filter="product-type">
+                                    <span class="checkmark"></span>
+                                    Arts & Crafts
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="communication-tools" class="filter-checkbox" data-filter="product-type">
+                                    <span class="checkmark"></span>
+                                    Communication Tools
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="active-play" class="filter-checkbox" data-filter="product-type">
+                                    <span class="checkmark"></span>
+                                    Active Play
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="puzzles" class="filter-checkbox" data-filter="product-type">
+                                    <span class="checkmark"></span>
+                                    Puzzles
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="clear-filters-btn" id="clearFilters">Clear All Filters</button>
+                    </div>
+
+                    <div class="products-main">
+                        <div class="products-header">
+                            <div class="results-info">
+                                <span id="productCount">Showing all products</span>
+                            </div>
+                            <div class="sort-controls">
+                                <select id="sortSelect" class="sort-select">
+                                    <option value="name">Sort by Name</option>
+                                    <option value="brand">Sort by Brand</option>
+                                    <option value="popularity">Most Popular</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="products-grid" id="productsGrid">
+                            <!-- Products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Tweel's Wheels</h2>
+                        <p>Tweel's Wheels™ offers adaptive play products that are accessible, appealing, and affordable. Our flagship product, an adaptive bicycle, is customized to each child's unique needs and preferences, at a competitive price.</p>
+                        <p>At Tweel's Wheels™ we prioritize customer engagement, feedback, and community-building, to further learn from and build with our customers and users. As we continue to do so, we will expand our product offerings to include a broader range of inclusive play solutions, ensuring all children have the opportunity to experience the joy of play.</p>
+                        <p>We're actively seeking families interested in becoming a part of our community of testers so we can build with, not for, you. Try early models, give feedback, and help us build better bikes for all!</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <img src="bicycle_sunset.png" alt="Bicycle at sunset" class="about-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tweel's Wheels</h3>
+                    <p>Beautifully designed, affordable play products for children with mobility challenges.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/tweelswheels/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/tweels-wheels/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tweel's Wheels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
